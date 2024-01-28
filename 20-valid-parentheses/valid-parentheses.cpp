@@ -19,6 +19,7 @@ public:
             }else if(s[i] == '}' && arr.back() == '{'){
                 arr.pop_back();
             }
+
             else{
                 return false;
             }
