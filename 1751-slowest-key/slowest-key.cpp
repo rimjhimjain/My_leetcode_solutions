@@ -13,7 +13,6 @@ public:
         }
 
         int max = *max_element(duration.begin(),duration.end());
-        cout << "max = "<< max<< endl;
         vector<char> candidates;
 
         for(int i = 0;i < duration.size();i++){
@@ -21,11 +20,6 @@ public:
                 candidates.push_back(alpha[i]);
             }
         }
-
-        for(int i =0;i < candidates.size();i++){
-            cout<<candidates[i]<<endl;
-        }
-       
 
         if (candidates.size() > 0) {
             char result = *std::max_element(candidates.begin(), candidates.end());
