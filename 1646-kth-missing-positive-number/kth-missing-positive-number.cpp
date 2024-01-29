@@ -19,9 +19,9 @@ public:
                 count++;
             }
         }
-        int ans = missing[k-1];
+      
 
-        return ans;
+        return missing[k-1];
         
     }
 };
