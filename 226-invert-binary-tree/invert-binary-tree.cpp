@@ -10,15 +10,28 @@
  * };
  */
 class Solution {
- public:
-  TreeNode* invertTree(TreeNode* root) {
-    if (root == nullptr)
-      return nullptr;
+public:
+    TreeNode* invertTree(TreeNode* root) {
 
-    TreeNode* const left = root->left;
-    TreeNode* const right = root->right;
-    root->left = invertTree(right);
-    root->right = invertTree(left);
-    return root;
-  }
+        // create temp left
+        // create temp right
+        // make root->right = templeft
+        // make root->left = tempright
+        if ( root!=nullptr ){
+
+        TreeNode* templeft = root -> left;
+        TreeNode* tempright = root -> right; 
+        // recursion invertTree(right)
+        // recursion invertTree(left)
+        root -> right = templeft;
+        root -> left = tempright;
+        invertTree(root->right);
+        invertTree(root->left);
+        
+        }
+
+        return root;
+        
+    }
 };
+
