@@ -12,26 +12,15 @@
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
+        if(root != NULL){
+            TreeNode* templeft = root -> left;
+            TreeNode* tempright = root -> right;
+            root -> left = tempright;
+            root -> right = templeft;
 
-        // create temp left
-        // create temp right
-        // make root->right = templeft
-        // make root->left = tempright
-        if ( root!=nullptr ){
-
-        TreeNode* templeft = root -> left;
-        TreeNode* tempright = root -> right; 
-        // recursion invertTree(right)
-        // recursion invertTree(left)
-        root -> right = templeft;
-        root -> left = tempright;
-        invertTree(root->right);
-        invertTree(root->left);
-        
+            invertTree(templeft);
+            invertTree(tempright);
         }
-
         return root;
-        
     }
 };
-
