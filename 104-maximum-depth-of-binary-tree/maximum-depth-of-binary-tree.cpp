@@ -11,31 +11,22 @@
  */
 class Solution {
 public:
-
-
-    int result = 0;
-    int height(TreeNode* root , int count){
+    int maxi = 0;
+    int death(TreeNode* root,int count){
         if(root == nullptr){
-            result = max(result, count);
-        return 0;
+            maxi = max(count,maxi);
+            return 0;
         }
-        count+=1;
-        height(root -> left , count);
-        height(root -> right , count);
-
+        count++;
+        death(root -> left,count);
+        death(root -> right,count);
         return 0;
-
     }
-
-
-
     int maxDepth(TreeNode* root) {
 
+        death(root,0);
+        
 
-        height(root , 0);
-
-       
-
-       return result;
+        return maxi;
     }
 };
