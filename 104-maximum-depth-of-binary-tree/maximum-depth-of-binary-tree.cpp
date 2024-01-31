@@ -13,10 +13,10 @@ class Solution {
 public:
 
 
-    vector <int > submit;
+    int result = 0;
     int height(TreeNode* root , int count){
         if(root == nullptr){
-            submit.push_back(count);
+            result = max(result, count);
         return 0;
         }
         count+=1;
@@ -36,6 +36,6 @@ public:
 
        
 
-       return *max_element(submit.begin(),submit.end());
+       return result;
     }
 };
