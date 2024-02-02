@@ -6,7 +6,7 @@ public:
 
         for(int i : s){
             if(size == -1) break;
-            long c = i - 'A' +1;
+            int c = i - 'A' +1;
             long power = pow(26,size);
             result += (c*power);
             size--;
