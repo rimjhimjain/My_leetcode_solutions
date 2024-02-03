@@ -1,11 +1,8 @@
 class Solution {
 public:
     vector<string> sortPeople(vector<string>& names, vector<int>& heights) {
-        vector<int> copy;
+        vector<int> copy(heights.begin(),heights.end());
         int n = heights.size();
-        for( int i =0 ; i < n;i++){
-            copy.push_back(heights[i]);
-        }
         sort(copy.begin(),copy.end());
         vector<string> ans;
 
