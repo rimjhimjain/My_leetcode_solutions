@@ -7,7 +7,7 @@ public:
         for(int i : s){
             if(size == -1) break;
             int c = i - 'A' +1;
-            cout << c;
+
             long power = pow(26,size);
             result += (c*power);
             size--;
