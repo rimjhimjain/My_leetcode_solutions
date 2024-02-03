@@ -1,12 +1,16 @@
 class Solution {
 public:
     vector<string> sortPeople(vector<string>& names, vector<int>& heights) {
-        vector<int> copy(heights.begin(),heights.end());
+        vector<int> copy;
+        int n = heights.size();
+        for( int i =0 ; i < n;i++){
+            copy.push_back(heights[i]);
+        }
         sort(copy.begin(),copy.end());
         vector<string> ans;
 
-        for(int i = 0;i < copy.size();i++){
-            for(int j = 0;j < copy.size();j++){
+        for(int i = 0;i < n;i++){
+            for(int j = 0;j < n;j++){
                 if(copy[i] == heights[j]){
                     ans.insert(ans.begin(),names[j]);
                 }
