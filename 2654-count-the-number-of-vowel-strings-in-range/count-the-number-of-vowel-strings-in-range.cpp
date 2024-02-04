@@ -3,12 +3,6 @@ public:
     int vowelStrings(vector<string>& words, int start, int end) {
         int count = 0;
 
-        vector<char> vowel;
-        vowel.push_back('a');
-        vowel.push_back('e');
-        vowel.push_back('i');
-        vowel.push_back('o');
-        vowel.push_back('u');
         int right =0;
 
         for(int i = start ;i < end+1;i++){
