@@ -5,8 +5,9 @@ public:
         if(n <= 2) return -1;
 
         sort(nums.begin(),nums.end());
+        int a = nums[1];
 
-        return nums[1];
+        return a;
         
     }
 };
