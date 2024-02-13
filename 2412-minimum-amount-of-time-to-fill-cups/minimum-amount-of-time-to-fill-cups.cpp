@@ -8,7 +8,7 @@ public:
             sum++;
             a[1]--;
             a[2]--;
-            cout << a[0] << " "<<a[1]<<" "<<a[2]<<endl;
+            // cout << a[0] << " "<<a[1]<<" "<<a[2]<<endl;
         }
         return sum;
     }
