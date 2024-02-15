@@ -9,16 +9,16 @@ public:
         int num1 = INT_MIN;
         int num2 = INT_MIN;
 
-        for(int i = 0;i < n;i++){
-            if(nums[i] == num1){
+        for(auto& i: nums){
+            if(i == num1){
                 c1++;
-            }else if(nums[i] == num2){
+            }else if(i == num2){
                 c2++;
             }else if(c1 == 0){
-                num1 = nums[i];
+                num1 = i;
                 c1++;
             }else if(c2 == 0){
-                num2 = nums[i];
+                num2 = i;
                 c2++;
             }else{
                 c1--;
@@ -28,11 +28,11 @@ public:
 
         c1 = 0;
         c2 = 0;
-        for(int i = 0;i < n;i++){
-            if(num1 == nums[i]){
+        for(auto& i : nums){
+            if(num1 == i){
                 c1++;
             }
-            if(num2 == nums[i]){
+            if(num2 == i){
                 c2++;
             }
         }
