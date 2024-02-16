@@ -2,23 +2,21 @@ class Solution {
 public:
     int jump(vector<int>& nums) {
         int n = nums.size();
-        for (int i = 1; i < n; i++) {
-            nums[i] = max(nums[i] + i, nums[i - 1]);
-            cout << nums[i]<<" ";
+        int jumps = 0;
+        int cur = 0;
+        int curfar = 0; 
+        
+        for (int i = 0; i < n - 1; i++) {
+            curfar = max(curfar, i + nums[i]);
+            cout << "cur = " << cur <<endl;
+            cout << "curfur = " <<curfar <<endl;
+            if (i == cur) {
+                jumps++;
+                cur = curfar;
+            }
+            cout << "jumps = " <<jumps <<endl;
         }
-        cout << "next " << endl;
-        for(int i = 0; i < n;i++){
-            cout << nums[i] << " ";
-        }
-        cout << "---" << endl;
-        int count = 0;
-        int in = 0;
-        while(in < n-1){
-            count++;
-            in = nums[in];
-            cout << "ans = "<< count <<endl;
-            cout << "in = "<<in<<endl;
-        }
-        return count;
+
+        return jumps;
     }
 };
