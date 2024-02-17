@@ -18,7 +18,6 @@ public:
             if(pq.size() > k) pq.pop();
         }
         
-        
         while(pq.size()){
             ans[--k] = pq.top().second;
             pq.pop();
