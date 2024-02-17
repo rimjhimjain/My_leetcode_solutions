@@ -2,30 +2,25 @@ class Solution {
 public:
     int deleteGreatestValue(vector<vector<int>>& grid) {
 
-        int m = grid.size();//2
-        int n = grid[0].size();//3
-        int ans =0;
-
-        unordered_map<int, priority_queue<int>> mp;
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
-                mp[i].push(grid[i][j]);
+        for(auto& row : grid){
+            sort(row.begin(),row.end());
+        }
+        int n = grid.size();//3
+        int m = grid[0].size();//2
+        int ans = 0;
+            for(int i = 0;i < n;i++){
+                sort(grid[i].begin(),grid[i].end());
             }
-        }
 
-        for(const auto& i : mp){
-            cout << i.first<<" "<<endl;
-        }
-
-        for(int i = 0; i < n;i++){
-            int maxval = -1;
-            for(int j = 0;j < m;j++){
-                int value = mp[j].top();
-                mp[j].pop();
-                maxval = max(maxval,value);
+        for(int j = 0; j< m ;j++){
+            int maxi = INT_MIN;
+            for(int i = 0;i < n;i++){
+                maxi = max(maxi,grid[i][j]);
             }
-            ans += maxval;
+            cout << maxi<<" ";
+            ans += maxi;
         }
+
         
         // int maxi = 0;
         // while(!pq.empty()){
