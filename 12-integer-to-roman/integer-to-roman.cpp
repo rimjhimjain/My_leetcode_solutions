@@ -33,7 +33,6 @@ public:
             } else {
                 i++;
             }
-            cout << num << endl;
         }
 
         return roman;
