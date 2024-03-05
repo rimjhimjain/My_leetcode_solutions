@@ -3,60 +3,24 @@ public:
     int numUniqueEmails(vector<string>& emails) {   
 
         unordered_set<string> unique;
-        for(int i = 0;i < emails.size();i++){
-
+        for(string email : emails){
             string modified ;
             int j  = 0;
-            for( j = 0 ; emails[i][j]  != '@' ; j++ ){
-                printf("%c ",emails[i][j]);
-                if(emails[i][j] == '.'){
+            for(char c : email){
+                if(c == '.'){
                     continue;
                 }
-                else if ( emails[i][j] == '+' ){
-                    
+                if(c == '+'){
                     break;
                 }
-                modified+=emails[i][j];
-
-
+                if(c == '@') break;
+                modified+=c;
             }
-            for( j = j ; emails[i][j]  != '@' ; j++ ){
+            int index = email.find('@');
+            for (j = index ; j <  email.size() ; j++){
+                modified+=email[j];
             }
-
-            for (j = j ; j <  emails[i].size() ; j++){
-                modified+=emails[i][j];
-                //printf("%c ",emails[i][j]);
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            // for(int j = 0;j < emails[i].size()-4;i++){
-            //     if(emails[i][j] == '@'){
-            //         break;
-            //     }
-            //     if(emails[i][j] == '.'){
-            //         continue;
-            //     }
-            //     if(email[i][j] == '+'){
-
-            //     }
-            //     modified += emails[i][j];
-            // }
+            cout << modified;
             unique.insert(modified);
         }
         return unique.size();
