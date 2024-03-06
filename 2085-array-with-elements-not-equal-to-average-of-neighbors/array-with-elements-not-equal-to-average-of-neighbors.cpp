@@ -7,7 +7,6 @@ public:
             if(i > 0 && (nums[i-1]+nums[i+1]) == 2*nums[i]){
                 swap(nums[i],nums[i+1]);
                 i--;
-            cout << nums[i]<<endl;
             }else{
             i++;
             }
