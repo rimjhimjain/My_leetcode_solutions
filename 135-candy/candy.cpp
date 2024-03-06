@@ -18,18 +18,10 @@ public:
             }
         }
 
-        // cout
         for(int i = 0;i < n;i++){
-            cout<<candy[i] <<" ";
             sum+=candy[i];
         }
         
-
-
         return sum;
     }
 };
-
-// 1 2 7 4 3 3 1
-// 1,2,5,4,3,3,1
-// 1,2,3,2,1,2,1
