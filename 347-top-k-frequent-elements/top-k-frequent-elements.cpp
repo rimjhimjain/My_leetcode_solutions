@@ -3,7 +3,6 @@ public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
 
         unordered_map<int, int> nmap;
-        vector<int> answer;
 
         for (int i = 0; i < nums.size(); i++) {
             if (nmap.find(nums[i]) != nmap.end()) {
