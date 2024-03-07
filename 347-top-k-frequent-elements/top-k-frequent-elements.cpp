@@ -12,10 +12,7 @@ public:
                 nmap[nums[i]] = 1;
             }
         }
-        for(const auto j : nmap){
-            cout << j.first << " " << j.second << endl;
-        }
-
+        
         vector<pair<int, int>> pairs(nmap.begin(), nmap.end());
 
         int maxi = 0;
