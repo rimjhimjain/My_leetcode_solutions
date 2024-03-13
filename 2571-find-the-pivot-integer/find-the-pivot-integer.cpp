@@ -5,18 +5,15 @@ public:
         int num = 2;
             int i = 0;
             int sum1 = 0;
+            int sum = 0;
             int sum2 = 0;
 
             while(num < n+1){
                 sum1 = 0;
-                sum2 = 0;
-                for(i = 1;i < num+1;i++){
-                    sum1 += i;
-                }
-                for(i = num;i < n+1;i++){
-                    sum2 += i;
-                }
-                cout << sum1 << " "<<sum2 <<" "<<num<<endl;
+                sum =0;
+                    sum1 += num*(num+1)/2;
+                    sum += n*(n+1)/2;
+                    sum2 = (sum - sum1)+num;
                 if(sum1 == sum2){
                     return num;
                 }else{
