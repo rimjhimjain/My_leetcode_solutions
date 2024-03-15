@@ -23,8 +23,8 @@ public:
                 res.insert(c[i]);
             }
         }
-        vector<int> ans(res.begin(),res.end());
-
+        vector<int> ans;
+        for(auto x:res)ans.push_back(x);
         
         return ans;
     }
