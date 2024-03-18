@@ -24,9 +24,6 @@ public:
             }else{
                 s--;
             }
-            cout << "S = "<<s<<endl;
-            cout << "res = "<< res<<endl;
-            cout << "check = "<<check << endl;
         }
         return check;
     }
