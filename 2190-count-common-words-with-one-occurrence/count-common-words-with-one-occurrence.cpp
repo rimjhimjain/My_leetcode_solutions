@@ -1,8 +1,8 @@
 class Solution {
 public:
     int countWords(vector<string>& words1, vector<string>& words2) {
-        unordered_map<string,int> s1;
-        unordered_map<string,int> s2;
+        unordered_map<string, int> s1;
+        unordered_map<string, int> s2;
 
         int count = 0;
         for (const auto& word : words1) {
@@ -10,14 +10,13 @@ public:
         }
 
         for (const auto& word : words2) {
-           s2[word]++;
-        } 
+            s2[word]++;
+        }
 
-        for(const auto& i : s1){
-            for(const auto& j : s2){
-                if(i.first == j.first && i.second == 1 && j.second == 1){
-                        count++;
-                }
+        for (const auto& pair : s1) {
+            if (pair.second == 1 && s2.find(pair.first) != s2.end() &&
+                s2[pair.first] == 1) {
+                count++;
             }
         }
         return count;
