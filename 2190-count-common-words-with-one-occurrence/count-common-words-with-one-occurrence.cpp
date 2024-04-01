@@ -5,11 +5,11 @@ public:
         unordered_map<string,int> s2;
 
         int count = 0;
-        for (const string& word : words1) {
+        for (const auto& word : words1) {
             s1[word]++;
         }
 
-        for (const string& word : words2) {
+        for (const auto& word : words2) {
            s2[word]++;
         } 
 
