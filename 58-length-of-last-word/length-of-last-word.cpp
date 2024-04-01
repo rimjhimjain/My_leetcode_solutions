@@ -1,14 +1,18 @@
 class Solution {
 public:
-    int lengthOfLastWord(string s) {
-        int  n = s.length();
+    int lengthOfLastWord(string t) {
+        
+        int s = t.length();
 
-        int point = n-1;
-        while(point >= 0 && s[point] == ' ' ){
-            point--;
+        int n = s-1;
+        int count  = 0;
+        while(n >= 0 && t[n] == ' '){
+            n--;
         }
-        int len =0;
-        while(point >= 0 && s[point--] != ' ')len++;
-    return len;
+        while(n >= 0 && t[n] != ' '){
+            n--;
+            count++;
+        }
+        return count;
     }
 };
