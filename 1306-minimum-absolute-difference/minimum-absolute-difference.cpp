@@ -8,7 +8,6 @@ public:
         for(int i = 0;i < arr.size()-1;i++){
             diff = min(diff,abs(arr[i+1] - arr[i]));
         }
-        cout << diff;
 
         for(int i = 0;i < arr.size()-1;i++){
             int temp = abs(arr[i+1] - arr[i]);
