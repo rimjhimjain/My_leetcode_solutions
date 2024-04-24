@@ -28,9 +28,6 @@ public:
                 arr.push_back(trust[i][0]);
             }
         }
-        for(int i = 0;i < arr.size();i++){
-            cout << arr[i] << endl;
-        }
         if(arr.size() == n-1){
             return judge;
         }
