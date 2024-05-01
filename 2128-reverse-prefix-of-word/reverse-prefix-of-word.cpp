@@ -15,7 +15,6 @@ public:
         if(check == false) return word;
         int j = 0;
         for(int i = temp.length()-1;i > -1;i--){
-            cout << word[j] <<" "<<temp[i] <<endl;
             word[j] = temp[i];
             j++;
         }
