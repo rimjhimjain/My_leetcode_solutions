@@ -22,7 +22,6 @@ public:
         ans.push_back(root->val);
         vector<int> right = inorderTraversal(root -> right);
         ans.insert(ans.end(), right.begin(), right.end());
-        // ans.push_back(root->val);
 
         return ans;   
     }
