@@ -3,7 +3,7 @@ public:
 
     vector<int> v;
     MyHashMap() {
-        v.resize(1000000+10,-1);
+        v.resize(1000000+1,-1);
     }
     
     void put(int key, int value) {
