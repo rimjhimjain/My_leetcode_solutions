@@ -3,9 +3,7 @@ public:
 
     vector<int> v;
     MyHashMap() {
-        for(int i = 0;i <= 1000000;i++){
-            this->v.push_back(-1);
-        }
+        v.resize(1000000+10,-1);
     }
     
     void put(int key, int value) {
