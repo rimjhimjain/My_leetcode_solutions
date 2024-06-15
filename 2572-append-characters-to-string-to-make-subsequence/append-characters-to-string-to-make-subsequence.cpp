@@ -8,9 +8,6 @@ public:
                 j++;
             }
         }
-        int count = 0;
-        count = t.size()-j;
-
-        return count;
+        return t.size()-j;
     }
 };
