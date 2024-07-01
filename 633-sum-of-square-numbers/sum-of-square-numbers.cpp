@@ -1,17 +1,19 @@
 class Solution {
 public:
     bool judgeSquareSum(int c) {
-        
-        for(int i = 2;i * i <= c;i++){
-            if(c%i == 0){
-                int expocount = 0;
-                while(c%i == 0){
-                    expocount++;
-                    c /= i;
-                }
-                if(i%4 == 3 && expocount %2 != 0) return false;
+        long left = 0;
+        long right = static_cast<long>(sqrt(c));
+
+        while(left <=right){
+            long curr_sum = left*left + right*right;
+            if(curr_sum == c)return true;
+
+            if(curr_sum < c) {
+                left++;
+            }else {
+                right--;
             }
         }
-        return c%4 != 3;
+        return false;
     }
 };
