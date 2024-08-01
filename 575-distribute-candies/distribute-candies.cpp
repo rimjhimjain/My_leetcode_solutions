@@ -6,10 +6,9 @@ public:
 
         unordered_set<int> candy(candyType.begin(),candyType.end());
 
-        int canBeEaten = n/2;
-        if(canBeEaten > candy.size()){
+        if(n/2 > candy.size()){
             return candy.size();
         }
-        return canBeEaten;
+        return n/2;
     }
 };
