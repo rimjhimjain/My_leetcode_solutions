@@ -1,6 +1,10 @@
 class Solution {
 public:
     bool lemonadeChange(vector<int>& bills) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(0);
+        cout.tie(0);
+        
         if(bills[0] == 10 || bills[0] == 20) return false;
 
         int bill5 = 0;
